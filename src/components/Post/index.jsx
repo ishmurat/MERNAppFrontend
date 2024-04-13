@@ -26,6 +26,7 @@ export const Post = ({
   isFullPost,
   isLoading,
   isEditable,
+  text
 }) => {
   const dispatch = useDispatch();
   if (isLoading) {
@@ -41,7 +42,7 @@ export const Post = ({
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
         <div className={styles.editButtons}>
-          <Link to={`/posts/$id}/edit`}>
+          <Link to={`/posts/${id}/edit`}>
             <IconButton color="primary">
               <EditIcon />
             </IconButton>
@@ -64,6 +65,7 @@ export const Post = ({
           <h2 className={clsx(styles.title, { [styles.titleFull]: isFullPost })}>
             {isFullPost ? title : <Link to={`/posts/${id}`}>{title}</Link>}
           </h2>
+          <h3 className={styles.additionalText}>{text}</h3>
           <ul className={styles.tags}>
             {tags.map((name) => (
               <li key={name}>
