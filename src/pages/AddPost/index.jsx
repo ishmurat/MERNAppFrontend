@@ -27,7 +27,7 @@ export const AddPost = () => {
   const inputfileRef = React.useRef(null);
 
   const isEditing = Boolean(id);
-
+ 
   const handleChangeFile = async (event) => {
     try {
       const formData = new FormData();
