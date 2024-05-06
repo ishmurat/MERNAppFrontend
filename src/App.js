@@ -21,7 +21,6 @@ function App() {
     <>
       <Header />
       <Container maxWidth="lg">
-        <HashRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/posts/:id" element={<FullPost />} />
@@ -30,7 +29,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Registration />} />
           </Routes>
-        </HashRouter>
       </Container>
     </>
   );
