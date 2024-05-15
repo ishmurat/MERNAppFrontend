@@ -16,7 +16,7 @@ root.render(
   <>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename="https://ishmurat.github.io/MERNAppFrontend">
+      <BrowserRouter>
         <Provider store={store}>
           <App />
         </Provider>
