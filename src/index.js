@@ -16,7 +16,7 @@ root.render(
   <>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
           <App />
         </Provider>
