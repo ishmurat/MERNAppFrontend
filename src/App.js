@@ -21,7 +21,7 @@ function App() {
     <>
       <Header />
       <Container maxWidth="lg">
-          <Routes basename='https://ishmurat.github.io/MERNAppFrontend'>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/posts/:id" element={<FullPost />} />
             <Route path="/posts/:id/edit" element={<AddPost />} />
